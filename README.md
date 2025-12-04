@@ -351,6 +351,106 @@ Mobile:
 
 EXPO_PUBLIC_API_URL=http://10.0.2.2:3000
 
+Expo build instructions:
+
+How to Build the Mobile App (APK) Using Expo
+
+Expo now uses EAS Build for generating APKs or AABs (Play Store).
+Follow these steps in order.
+
+✅ 1. Install Expo CLI (if not installed)
+
+npm install -g expo-cli
+
+✅ 2. Install EAS CLI (required for building APK)
+
+npm install -g eas-cli
+
+✅ 3. Login to Expo
+
+eas login
+
+
+Enter your email + password.
+
+✅ 4. Navigate to the mobile app folder
+
+cd C:\Users\PradeepB\react-project\mobile
+
+
+Or whichever folder your mobile app is in.
+
+✅ 5. Install dependencies
+
+npm install
+
+✅ 6. Create an Expo project config (if not already)
+
+eas build:configure
+
+
+This generates:
+
+eas.json
+
+✅ 7. Set API URL in .env (important)
+
+If running backend locally:
+
+For Android Emulator
+EXPO_PUBLIC_API_URL=http://10.0.2.2:3000
+
+For Physical Device
+
+Find your PC IP:
+
+ipconfig
+
+
+Then set:
+
+EXPO_PUBLIC_API_URL=http://YOUR_IP:3000
+
+
+Example:
+
+EXPO_PUBLIC_API_URL=http://192.168.1.19:3000
+
+
+Restart Expo after editing .env.
+
+✅ 8. Build the APK
+
+📦 To generate an APK (installable file):
+eas build -p android --profile preview
+
+
+OR to generate a signed Play Store AAB:
+
+eas build -p android --profile production
+
+
+Expo will:
+
+Upload your project
+
+Build it on Expo servers
+
+Give you a download link to the APK
+
+🎉 After Build Completes
+
+Expo will show something like:
+
+Build complete!
+
+Download your APK:
+
+https://expo.dev/accounts/yourname/projects/app/builds/xxxxxxxx
+
+
+Click link → Download APK → Install on your device.
+
 📹 Demo Video
 
 ▶️ https://drive.google.com/file/d/1pvoAqBlEOEGYtReX7R0T4N93pX2PJV72/view?usp=sharing
@@ -367,4 +467,4 @@ Prisma schema & migrations included
 
 Docker setup included
 
-React Native optional build included
+React Native expo  build included
