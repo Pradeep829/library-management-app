@@ -68,11 +68,6 @@ Protected routes using JWT
 
 Token persisted in local storage
 
-**📁 Project Structure**
-react-project/
-│── backend/        # NestJS + Prisma + PostgreSQL
-│── frontend/       # React.js (TypeScript)
-└── mobile/         # Optional: React Native App
 
 **🛠️ Prerequisites**
 
