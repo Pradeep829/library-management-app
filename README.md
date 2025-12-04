@@ -145,6 +145,7 @@ Verify installation:
 psql --version
 
 Create Database
+
 psql -U postgres
 
 
