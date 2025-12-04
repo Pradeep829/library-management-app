@@ -81,7 +81,7 @@ https://nodejs.org/en/download/
 
 https://www.docker.com/products/docker-desktop/
 
-3️⃣ PostgreSQL (if not using Docker or Supabase)
+3️⃣ PostgreSQL
 
 https://www.postgresql.org/download/
 
