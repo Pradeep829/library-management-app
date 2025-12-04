@@ -1,12 +1,13 @@
-📚 Full-Stack Library Management System
+**📚 Full-Stack Library Management System**
 
 NestJS + PostgreSQL + Prisma + React + React Native
 
-🔗 Live Demo Video
+**🔗 Live Demo Video**
+
 
 ▶️ https://drive.google.com/file/d/1pvoAqBlEOEGYtReX7R0T4N93pX2PJV72/view?usp=sharing
 
-🚀 Overview
+**🚀 Overview**
 
 This project is a full-stack Library System built as part of the Full-Stack Developer assignment.
 It includes:
@@ -31,7 +32,7 @@ It includes:
 
 🐳 Docker Support
 
-🧩 Features
+**🧩 Features**
 📘 Books
 
 Create / Edit / Delete books
@@ -66,13 +67,13 @@ Protected routes using JWT
 
 Token persisted in local storage
 
-📁 Project Structure
+**📁 Project Structure**
 react-project/
 │── backend/        # NestJS + Prisma + PostgreSQL
 │── frontend/       # React.js (TypeScript)
 └── mobile/         # Optional: React Native App
 
-🛠️ Prerequisites
+**🛠️ Prerequisites**
 
 Before starting, install these:
 
@@ -88,7 +89,7 @@ https://www.docker.com/products/docker-desktop/
 
 https://www.postgresql.org/download/
 
-📦 Installation & Run Guide
+**📦 Installation & Run Guide**
 
 Two methods are available:
 
@@ -134,8 +135,8 @@ Visit:
 Email: admin@library.com
 Password: password123
 
-🟦 Method 2: Manual Installation (Without Docker)
-🗄 Part A — Install PostgreSQL
+**🟦 Method 2: Manual Installation (Without Docker)**
+Install PostgreSQL
 Option A1: Install Locally
 
 Download PostgreSQL:
@@ -156,16 +157,7 @@ Then run:
 CREATE DATABASE library_db;
 \q
 
-Option A2: Use Supabase (Easiest Cloud Option)
-
-Go to https://supabase.com
-
-Create Project → Name: library-project
-
-Copy the database connection string from:
-Project Settings → Database → Connection String
-
-🧱 Part B — Backend Setup
+**🧱 Part B — Backend Setup**
 Step 1: Open Terminal
 cd C:\Users\PradeepB\react-project\backend
 
@@ -180,12 +172,6 @@ JWT_EXPIRES_IN="7d"
 PORT=3000
 NODE_ENV=development
 
-📌 Using Supabase:
-DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@db.xxxxx.supabase.co:5432/postgres"
-JWT_SECRET="my-super-secret-jwt-key-12345"
-JWT_EXPIRES_IN="7d"
-PORT=3000
-NODE_ENV=development
 
 Step 4: Prisma Generate
 npm run prisma:generate
@@ -228,7 +214,7 @@ npm run dev
 Frontend URL:
 👉 http://localhost:3001
 
-📱 Optional — Mobile App Setup (React Native + Expo)
+📱 Mobile App Setup (React Native + Expo)
 Step 1: Install Expo CLI
 npm install -g expo-cli
 
