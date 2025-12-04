@@ -1,6 +1,6 @@
 📚 Full-Stack Library Management System
 
-NestJS + PostgreSQL + Prisma + React (React Native optional)
+NestJS + PostgreSQL + Prisma + React + React Native
 
 🔗 Live Demo Video
 
