@@ -233,10 +233,13 @@ Frontend URL:
 **📱 Mobile App Setup (React Native + Expo)**
 
 Step 1: Install Expo CLI
+
 npm install -g expo-cli
 
 Step 2: Go to mobile folder
+
 cd C:\Users\PradeepB\react-project\mobile
+
 npm install
 
 Step 3: .env
@@ -256,6 +259,7 @@ Find IP:
 ipconfig
 
 Step 4: Start Expo
+
 npm start
 
 
