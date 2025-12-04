@@ -132,8 +132,10 @@ Email: admin@library.com
 Password: password123
 
 **🟦 Method 2: Manual Installation (Without Docker)**
+
 Install PostgreSQL
-Option A1: Install Locally
+
+Install Locally
 
 Download PostgreSQL:
 https://www.postgresql.org/download/
