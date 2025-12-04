@@ -1,1 +1,363 @@
-# library-management-app
+📚 Full-Stack Library Management System
+
+NestJS + PostgreSQL + Prisma + React (React Native optional)
+
+🔗 Live Demo Video
+
+▶️ https://drive.google.com/file/d/1pvoAqBlEOEGYtReX7R0T4N93pX2PJV72/view?usp=sharing
+
+🚀 Overview
+
+This project is a full-stack Library System built as part of the Full-Stack Developer assignment.
+It includes:
+
+📘 CRUD for Books
+
+✍️ CRUD for Authors
+
+👤 CRUD for Users
+
+🔄 Borrowing & Returning books
+
+🔐 JWT Authentication
+
+🗄 PostgreSQL + Prisma
+
+🛠 NestJS Backend
+
+💻 React.js Frontend (TypeScript)
+
+📱 Optional React Native Mobile App
+
+🐳 Docker Support
+
+🧩 Features
+📘 Books
+
+Create / Edit / Delete books
+
+List with filters (author, borrowed status)
+
+✍️ Authors
+
+Add / Edit / Delete authors
+
+View authors list
+
+👥 Users
+
+Create new users
+
+List all users
+
+🔄 Borrowing Flow
+
+Borrow a book
+
+Return a book
+
+View user’s borrowed books
+
+🔐 Auth
+
+Login with email + password
+
+Protected routes using JWT
+
+Token persisted in local storage
+
+📁 Project Structure
+react-project/
+│── backend/        # NestJS + Prisma + PostgreSQL
+│── frontend/       # React.js (TypeScript)
+└── mobile/         # Optional: React Native App
+
+🛠️ Prerequisites
+
+Before starting, install these:
+
+1️⃣ Node.js 18+
+
+https://nodejs.org/en/download/
+
+2️⃣ Docker (optional but recommended)
+
+https://www.docker.com/products/docker-desktop/
+
+3️⃣ PostgreSQL (if not using Docker or Supabase)
+
+https://www.postgresql.org/download/
+
+📦 Installation & Run Guide
+
+Two methods are available:
+
+✅ Method 1: Run Everything Using Docker (Recommended)
+Step 1: Open Terminal
+
+Windows:
+
+Win + R → cmd
+
+Step 2: Go to the project root
+cd C:\Users\PradeepB\react-project
+
+Step 3: Start backend + PostgreSQL
+docker-compose up -d
+
+
+Wait 30–60 seconds.
+
+Check status:
+
+docker-compose ps
+
+
+You should see:
+
+postgres     running
+backend      running
+
+🖥️ Start Frontend
+
+Open a NEW terminal:
+
+cd C:\Users\PradeepB\react-project\frontend
+npm install
+npm run dev
+
+
+Visit:
+👉 http://localhost:3001
+
+🔑 Login Credentials
+Email: admin@library.com
+Password: password123
+
+🟦 Method 2: Manual Installation (Without Docker)
+🗄 Part A — Install PostgreSQL
+Option A1: Install Locally
+
+Download PostgreSQL:
+https://www.postgresql.org/download/
+
+During setup choose a password for postgres
+
+Verify installation:
+
+psql --version
+
+Create Database
+psql -U postgres
+
+
+Then run:
+
+CREATE DATABASE library_db;
+\q
+
+Option A2: Use Supabase (Easiest Cloud Option)
+
+Go to https://supabase.com
+
+Create Project → Name: library-project
+
+Copy the database connection string from:
+Project Settings → Database → Connection String
+
+🧱 Part B — Backend Setup
+Step 1: Open Terminal
+cd C:\Users\PradeepB\react-project\backend
+
+Step 2: Install dependencies
+npm install
+
+Step 3: Create .env
+📌 Using Local PostgreSQL:
+DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/library_db?schema=public"
+JWT_SECRET="my-super-secret-jwt-key-12345"
+JWT_EXPIRES_IN="7d"
+PORT=3000
+NODE_ENV=development
+
+📌 Using Supabase:
+DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@db.xxxxx.supabase.co:5432/postgres"
+JWT_SECRET="my-super-secret-jwt-key-12345"
+JWT_EXPIRES_IN="7d"
+PORT=3000
+NODE_ENV=development
+
+Step 4: Prisma Generate
+npm run prisma:generate
+
+Step 5: Run Migrations
+npm run prisma:migrate
+
+
+Enter name:
+
+init
+
+Step 6: Seed Database
+npm run prisma:seed
+
+Step 7: Start Backend
+npm run start:dev
+
+
+Backend available at:
+
+API: http://localhost:3000
+
+Swagger: http://localhost:3000/api
+
+🎨 Part C — Frontend Setup (React)
+Step 1: New terminal
+cd C:\Users\PradeepB\react-project\frontend
+
+Step 2: Install Dependencies
+npm install
+
+Step 3: (Optional) Create .env
+VITE_API_URL=http://localhost:3000
+
+Step 4: Run App
+npm run dev
+
+
+Frontend URL:
+👉 http://localhost:3001
+
+📱 Optional — Mobile App Setup (React Native + Expo)
+Step 1: Install Expo CLI
+npm install -g expo-cli
+
+Step 2: Go to mobile folder
+cd C:\Users\PradeepB\react-project\mobile
+npm install
+
+Step 3: .env
+
+Android emulator:
+
+EXPO_PUBLIC_API_URL=http://10.0.2.2:3000
+
+
+Physical device:
+
+EXPO_PUBLIC_API_URL=http://YOUR_LOCAL_IP:3000
+
+
+Find IP:
+
+ipconfig
+
+Step 4: Start Expo
+npm start
+
+
+Press:
+
+a → Android emulator
+
+Scan QR → open in Expo Go
+
+📝 API Documentation
+
+If Swagger is enabled:
+
+👉 http://localhost:3000/api
+
+🧪 Testing Protected Routes (JWT)
+
+Login using POST /auth/login
+
+Get access_token
+
+Send requests with:
+
+Authorization: Bearer <token>
+
+🐛 Troubleshooting Guide
+❌ Backend fails to start with PostgreSQL
+
+Fix:
+
+netstat -ano | findstr :5432
+
+
+Stop conflicting process.
+
+❌ Prisma Client not generated
+cd backend
+npm run prisma:generate
+
+❌ PostgreSQL connection error
+
+Check:
+
+Is PostgreSQL running?
+
+Is password correct?
+
+Is database name correct?
+
+❌ Docker not starting containers
+
+Run:
+
+docker-compose down
+docker-compose up --build
+
+
+Check logs:
+
+docker-compose logs --tail=100 backend
+
+❌ Migration errors
+npx prisma migrate reset
+npx prisma migrate dev
+
+❌ Frontend cannot connect to backend
+
+Verify .env:
+
+VITE_API_URL=http://localhost:3000
+
+
+Restart frontend.
+
+📄 .env.example
+DATABASE_URL=
+JWT_SECRET=my-super-secret-jwt-key-12345
+JWT_EXPIRES_IN=7d
+PORT=3000
+NODE_ENV=development
+
+
+Frontend:
+
+VITE_API_URL=http://localhost:3000
+
+
+Mobile:
+
+EXPO_PUBLIC_API_URL=http://10.0.2.2:3000
+
+📹 Demo Video
+
+▶️ https://drive.google.com/file/d/1pvoAqBlEOEGYtReX7R0T4N93pX2PJV72/view?usp=sharing
+
+🎯 Final Notes
+
+Fully working backend + frontend
+
+JWT protected routes
+
+Organized folder structure
+
+Prisma schema & migrations included
+
+Docker setup included
+
+React Native optional build included
