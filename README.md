@@ -159,24 +159,34 @@ CREATE DATABASE library_db;
 **🧱 Part B — Backend Setup**
 
 Step 1: Open Terminal
+
 cd C:\Users\PradeepB\react-project\backend
 
 Step 2: Install dependencies
+
 npm install
 
 Step 3: Create .env
+
 📌 Using Local PostgreSQL:
+
 DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/library_db?schema=public"
+
 JWT_SECRET="my-super-secret-jwt-key-12345"
+
 JWT_EXPIRES_IN="7d"
+
 PORT=3000
+
 NODE_ENV=development
 
 
 Step 4: Prisma Generate
+
 npm run prisma:generate
 
 Step 5: Run Migrations
+
 npm run prisma:migrate
 
 
@@ -185,9 +195,11 @@ Enter name:
 init
 
 Step 6: Seed Database
+
 npm run prisma:seed
 
 Step 7: Start Backend
+
 npm run start:dev
 
 
@@ -200,12 +212,15 @@ Swagger: http://localhost:3000/api
 **🎨 Part C — Frontend Setup (React)**
 
 Step 1: New terminal
+
 cd C:\Users\PradeepB\react-project\frontend
 
 Step 2: Install Dependencies
+
 npm install
 
 Step 3: (Optional) Create .env
+
 VITE_API_URL=http://localhost:3000
 
 Step 4: Run App
