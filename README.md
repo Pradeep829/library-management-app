@@ -2,7 +2,7 @@
 
 NestJS + PostgreSQL + Prisma + React + React Native
 
-**🔗 Live Demo Video**
+**🔗 Demo Video**
 
 
 ▶️ https://drive.google.com/file/d/1pvoAqBlEOEGYtReX7R0T4N93pX2PJV72/view?usp=sharing
