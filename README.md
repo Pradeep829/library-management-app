@@ -155,6 +155,7 @@ CREATE DATABASE library_db;
 \q
 
 **🧱 Part B — Backend Setup**
+
 Step 1: Open Terminal
 cd C:\Users\PradeepB\react-project\backend
 
