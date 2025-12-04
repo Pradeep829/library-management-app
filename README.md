@@ -194,7 +194,8 @@ API: http://localhost:3000
 
 Swagger: http://localhost:3000/api
 
-🎨 Part C — Frontend Setup (React)
+**🎨 Part C — Frontend Setup (React)**
+
 Step 1: New terminal
 cd C:\Users\PradeepB\react-project\frontend
 
@@ -211,7 +212,8 @@ npm run dev
 Frontend URL:
 👉 http://localhost:3001
 
-📱 Mobile App Setup (React Native + Expo)
+**📱 Mobile App Setup (React Native + Expo)**
+
 Step 1: Install Expo CLI
 npm install -g expo-cli
 
